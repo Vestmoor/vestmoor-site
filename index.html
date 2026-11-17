@@ -39,7 +39,7 @@ nav{display:flex;align-items:center;gap:26px;font-size:13px;letter-spacing:.14em
 nav a{text-decoration:none;position:relative;padding:4px 0}
 nav a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 nav a:not(.cta):hover::after{transform:scaleX(1)}
-.cta,.btn{display:inline-block;background:var(--btn);color:var(--btn-t);border:0;padding:12px 22px;font:400 13px Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s}
+.cta,.btn{display:inline-block;white-space:nowrap;background:var(--btn);color:var(--btn-t);border:0;padding:12px 22px;font:400 13px Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s}
 .cta::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-120%);animation:sheen 4.5s ease-in-out 3s infinite;pointer-events:none}
 @keyframes sheen{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
 .cta i{display:inline-block;font-style:normal;margin-left:10px;transition:transform .35s}
@@ -53,6 +53,7 @@ nav a.cta::before{content:"";width:6px;height:6px;border-radius:50%;background:v
 .cta:hover,.btn:hover{transform:translateY(-2px)}
 .ghost{background:none;color:var(--ink);border:1px solid var(--line)}
 @media(max-width:760px){nav a:not(.cta){display:none}}
+@media(max-width:560px){.brand{gap:9px;font-size:15px;letter-spacing:.2em}.brand small{letter-spacing:.3em}.brand svg{width:26px;height:26px}nav a.cta{padding:9px 13px;font-size:11px;letter-spacing:.1em}nav a.cta::before{display:none}nav a.cta i{margin-left:6px}}
 .hero{position:relative;min-height:calc(100svh - 68px);display:flex;align-items:center;overflow:hidden;isolation:isolate}
 .hero svg.ct{position:absolute;inset:0;width:100%;height:100%;z-index:-2;will-change:transform}
 .ct path{fill:none;stroke:var(--gold);stroke-width:1.3;opacity:.38;stroke-dasharray:4000;animation:draw 2.8s cubic-bezier(.3,.6,.2,1) var(--dl) both,drift var(--dr) linear infinite}
