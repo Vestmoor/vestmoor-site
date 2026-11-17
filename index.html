@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vestmoor Group</title>
+<meta name="description" content="Vestmoor builds quiet, durable systems that carry the routine work of a business, so it keeps moving without anyone watching.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%235E1A27'/%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='none' stroke='%23B39A5B'/%3E%3Cpolygon points='8,9 14,9 16,17 18,9 24,9 18,23 14,23' fill='%23F3EEE0'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--bg:#F3EEE0;--bg2:#EAE3D0;--ink:#1F2321;--mute:#5b605d;--burg:#5E1A27;--gold:#7A6329;--line:rgba(31,35,33,.16);--card:#FBF8EF;--btn:#5E1A27;--btn-t:#F3EEE0;color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12080B;--bg2:#1B0E12;--ink:#F3EEE0;--mute:#b3aba0;--burg:#9A3548;--gold:#B39A5B;--line:rgba(243,238,224,.16);--card:#1E1014;--btn:#F3EEE0;--btn-t:#3b0f19;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12080B;--bg2:#1B0E12;--ink:#F3EEE0;--mute:#b3aba0;--burg:#9A3548;--gold:#B39A5B;--line:rgba(243,238,224,.16);--card:#1E1014;--btn:#F3EEE0;--btn-t:#3b0f19;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:500;line-height:1.05;margin:0}
+em{font-style:italic;color:var(--gold)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.4s}
+header.sc{border-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;transition:height .4s}
+header.sc .bar{height:56px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:500 17px "Cormorant Garamond",Georgia,serif;letter-spacing:.32em}
+.brand svg{width:30px;height:30px}
+.brand small{display:block;font:400 9px Jost,sans-serif;letter-spacing:.42em;color:var(--gold)}
+nav{display:flex;align-items:center;gap:26px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+nav a{text-decoration:none;position:relative;padding:4px 0}
+nav a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+nav a:not(.cta):hover::after{transform:scaleX(1)}
+.cta,.btn{display:inline-block;background:var(--btn);color:var(--btn-t);border:0;padding:12px 22px;font:400 13px Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:var(--bg);padding:8px 14px}
+.cta:hover,.btn:hover{transform:translateY(-2px)}
+.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+@media(max-width:760px){nav a:not(.cta){display:none}}
+.hero{position:relative;min-height:calc(100svh - 68px);display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.hero svg.ct{position:absolute;inset:0;width:100%;height:100%;z-index:-2;will-change:transform}
+.ct path{fill:none;stroke:var(--gold);stroke-width:1.3;opacity:.38;stroke-dasharray:4000;animation:draw 2.8s cubic-bezier(.3,.6,.2,1) var(--dl) both,drift var(--dr) linear infinite}
+@keyframes draw{from{stroke-dashoffset:4000}to{stroke-dashoffset:0}}
+@keyframes drift{to{transform:translateX(-400px)}}
+.glow{position:absolute;inset:0;z-index:-1;background:radial-gradient(520px circle at var(--gx,70%) var(--gy,30%),color-mix(in srgb,var(--gold) 20%,transparent),transparent 70%);transition:background .2s}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:38px;height:1px;background:var(--gold)}
+h1{font-size:clamp(46px,9.5vw,112px);margin:22px 0 26px}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line>span{display:inline-block;transform:translateY(112%);animation:up 1.2s cubic-bezier(.2,.8,.2,1) var(--d) forwards}
+@keyframes up{to{transform:none}}
+.lead{max-width:520px;font-size:19px;color:var(--mute);opacity:0;animation:fade 1.2s ease 1s forwards}
+.acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fade 1.2s ease 1.2s forwards}
+@keyframes fade{to{opacity:1}}
+.hero .wrap{padding-block:48px 96px}
+.ct.off path{animation-play-state:paused}
+.status{position:absolute;bottom:26px;left:22px;right:22px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.status b{font-weight:400;color:var(--gold)}
+.mq{border-block:1px solid var(--line);background:var(--bg2)}
+.mq .strip{display:flex;justify-content:space-between;flex-wrap:wrap;gap:0 28px}
+.mq span{font:italic 500 21px "Cormorant Garamond",Georgia,serif;padding:14px 0;color:var(--mute)}
+.js .card.rv.done{transition:transform .25s ease,border-color .4s}
+section{padding:110px 0}
+.tag{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+h2{font-size:clamp(36px,6vw,66px);max-width:760px}
+.sub{max-width:560px;color:var(--mute);margin:20px 0 0}
+.grid{display:grid;gap:18px;margin-top:54px}
+@media(min-width:820px){.g3{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:var(--card);border:1px solid var(--line);padding:34px 28px 36px;transform-style:preserve-3d;transition:transform .25s ease,border-color .4s;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(300px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--gold) 22%,transparent),transparent 70%);opacity:0;transition:opacity .4s}
+.card:hover{border-color:var(--gold)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.num{font:italic 500 18px "Cormorant Garamond",Georgia,serif;color:var(--gold);letter-spacing:.1em}
+.card h3{font-size:32px;margin:14px 0 12px}
+.card p{margin:0;color:var(--mute);font-size:16px}
+.pill{display:inline-block;margin-top:22px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--line);padding:6px 12px;color:var(--mute)}
+.dark-band{background:var(--bg2);border-block:1px solid var(--line)}
+.tl{position:relative;margin-top:56px;padding-left:34px}
+.tl::before,.tl i{content:"";position:absolute;left:6px;top:8px;width:1px}
+.tl::before{bottom:8px;background:var(--line)}
+.tl i{background:var(--gold);height:calc((100% - 16px)*var(--p,0))}
+.st{position:relative;padding-bottom:46px}
+.st:last-child{padding-bottom:0}
+.st::before{content:"";position:absolute;left:-34px;top:10px;width:13px;height:13px;transform:rotate(45deg) scale(.6);border:1px solid var(--gold);background:var(--bg);transition:.6s}
+.st.in::before{background:var(--gold);transform:rotate(45deg) scale(1)}
+.st h3{font-size:34px}
+.st p{margin:8px 0 0;color:var(--mute);max-width:520px}
+.ex{display:flex;gap:26px;margin-top:14px;font-size:13px;letter-spacing:.06em}
+.ex b{display:block;font-weight:400;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:24px 0;font:500 24px "Cormorant Garamond",Georgia,serif}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:28px;line-height:1;transition:transform .4s}
+details[open] summary::after{transform:rotate(135deg)}
+details p{margin:0 0 26px;max-width:640px;color:var(--mute);animation:fade .6s ease both}
+.faq{margin-top:46px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+.chip{font:300 15px Jost,sans-serif;color:var(--ink);background:none;border:1px solid var(--line);padding:10px 18px;cursor:pointer;transition:.3s}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed="true"]{background:var(--burg);border-color:var(--burg);color:#F3EEE0}
+label{display:block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:22px 0 8px}
+input,textarea{width:100%;font:300 17px Jost,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:14px 16px;border-radius:0;outline:0;transition:border-color .3s}
+input:focus,textarea:focus{border-color:var(--gold)}
+textarea{min-height:130px;resize:vertical}
+.form{max-width:680px;margin-top:40px}
+.note{font-size:14px;color:var(--mute);margin-top:16px;min-height:22px}
+footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity 1s ease var(--d,0s),transform 1s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.rule{height:1px;background:var(--gold);width:84px;margin:26px 0 0;transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.2,.8,.2,1) .2s}
+.in .rule,.rule.in{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv,.lead,.acts{opacity:1;transform:none}.line>span{transform:none}.ct path{stroke-dasharray:none}.rule{transform:none}.st::before{background:var(--gold)}.tl{--p:1}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="m" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5E1A27"/><rect x="4" y="4" width="92" height="92" fill="none" stroke="#B39A5B" stroke-width="2"/><g fill="#F3EEE0"><polygon points="28,28.5 40.5,28.5 52.5,62 52.5,72 49.5,72"/><polygon points="68,28.5 71.5,28.5 52.5,72 49.5,72"/><rect x="22" y="26" width="24" height="2.5"/><rect x="63" y="26" width="14" height="2.5"/></g></symbol></svg>
+
+<a class="skip" href="#principles">Skip to content</a>
+<header id="hd"><div class="wrap bar">
+<a class="brand" href="#top"><svg aria-hidden="true"><use href="#m"/></svg><span>VESTMOOR<small>GROUP</small></span></a>
+<nav><a href="#divisions">Divisions</a><a href="#principles">Principles</a><a href="#process">Process</a><a href="#faq">FAQ</a><a class="cta" href="#brief">Begin a brief</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero" id="hero">
+<svg class="ct" id="ct" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g id="cont"></g></svg>
+<div class="glow" id="glow"></div>
+<div class="wrap">
+<div class="eyebrow">Vestmoor Group · Worldwide</div>
+<h1><span class="line"><span style="--d:.2s">Built quietly.</span></span><span class="line"><span style="--d:.4s"><em>Built to last.</em></span></span></h1>
+<p class="lead">We design and build software that carries the routine work of a business, so it keeps moving without anyone watching.</p>
+<div class="acts"><a class="cta" href="#brief">Begin a brief</a><a class="cta ghost" href="#divisions">Our divisions</a></div>
+</div>
+<div class="status"><span>Now preparing first releases</span><b>Scroll</b></div>
+</div>
+
+<div class="mq"><div class="wrap strip"><span>Fixed-price scope</span><span>Full ownership at hand-over</span><span>Discreet by design</span></div></div>
+
+<section id="principles"><div class="wrap">
+<div class="tag rv">01 — Principles</div>
+<h2 class="rv" style="--d:.1s">Low upkeep, <em>by design.</em></h2>
+<div class="rule rv"></div>
+<p class="sub rv" style="--d:.2s">Routine work is where a business quietly loses its hours. We build the system, then step back.</p>
+<div class="grid g3">
+<div class="card rv" style="--d:.05s"><div class="num">I.</div><h3>It runs itself</h3><p>Orders, reminders, reconciliation and approvals run in the background instead of waiting on a person.</p></div>
+<div class="card rv" style="--d:.15s"><div class="num">II.</div><h3>You hold the keys</h3><p>A plain admin panel puts content, users and payments in your hands. Everyday changes never wait on us.</p></div>
+<div class="card rv" style="--d:.25s"><div class="num">III.</div><h3>Discreet by design</h3><p>The work speaks and the team stays behind it. Vestmoor communicates as one house, never as individuals.</p></div>
+</div></div></section>
+
+<section id="divisions" class="dark-band"><div class="wrap">
+<div class="tag rv">02 — Divisions</div>
+<h2 class="rv" style="--d:.1s">One house, <em>three branches.</em></h2>
+<div class="rule rv"></div>
+<div class="grid g3">
+<div class="card rv" style="--d:.05s"><div class="num">Vestmoor</div><h3>Systems</h3><p>Custom platforms and automation for schools, shops and small businesses. Scoped, priced and handed over in full.</p><span class="pill">In preparation</span></div>
+<div class="card rv" style="--d:.15s"><div class="num">Vestmoor</div><h3>Labs</h3><p>Open starter kits, templates and tooling for developers, published freely and written up in plain how-to articles.</p><span class="pill">First kit in preparation</span></div>
+<div class="card rv" style="--d:.25s"><div class="num">Vestmoor</div><h3>Group</h3><p>The parent house. It holds, maintains and steadily compounds what the other branches build.</p><span class="pill">Parent house</span></div>
+</div></div></section>
+
+<section id="process"><div class="wrap">
+<div class="tag rv">03 — Process</div>
+<h2 class="rv" style="--d:.1s">From brief <em>to hand-over.</em></h2>
+<div class="rule rv"></div>
+<div class="tl" id="tl"><i></i>
+<div class="st rv"><h3>Brief</h3><p>We agree what the system must do and what it costs, in one fixed written scope.</p><div class="ex"><div><b>You bring</b>the problem</div><div><b>You get</b>a written scope</div></div></div>
+<div class="st rv"><h3>Build</h3><p>We design and engineer it, sharing working versions early so you can react.</p><div class="ex"><div><b>You bring</b>feedback</div><div><b>You get</b>a working preview</div></div></div>
+<div class="st rv"><h3>Launch</h3><p>We deploy, connect your domain and payments, and stay close while real use settles in.</p><div class="ex"><div><b>You bring</b>your accounts</div><div><b>You get</b>a live system</div></div></div>
+<div class="st rv"><h3>Hand over</h3><p>An admin panel and documentation put you in control. Routine changes never wait on us.</p><div class="ex"><div><b>You bring</b>your content</div><div><b>You get</b>control</div></div></div>
+</div></div></section>
+
+<section id="faq" class="dark-band"><div class="wrap">
+<div class="tag rv">04 — Questions</div>
+<h2 class="rv" style="--d:.1s">Before you <em>reach out.</em></h2>
+<div class="faq rv" style="--d:.15s">
+<details><summary>Do I need to be technical?</summary><p>No. We ask in plain language what takes up your time and build around it. The finished system is run from an admin panel that needs no coding.</p></details>
+<details><summary>What does it cost, and how long does it take?</summary><p>Both depend on scope. After the brief you receive a fixed written package with the price, so you know the cost before any work begins.</p></details>
+<details><summary>What happens after launch?</summary><p>We stay close through launch to fix what real use turns up. After that you manage content, users and payments yourself.</p></details>
+<details><summary>Who is behind Vestmoor?</summary><p>Vestmoor is deliberately a house, not a personality. Every message, proposal and delivery comes from the team as one.</p></details>
+<details><summary>Do you work outside a single country?</summary><p>Yes. Vestmoor is built for a global market and works remotely with clients wherever they are.</p></details>
+</div></div></section>
+
+<section id="brief"><div class="wrap">
+<div class="tag rv">05 — Begin</div>
+<h2 class="rv" style="--d:.1s">Tell us what is <em>eating your time.</em></h2>
+<div class="rule rv"></div>
+<p class="sub rv" style="--d:.2s">Choose what you want to automate and write a short brief. We reply with what it would involve and what it costs.</p>
+<div class="form rv" style="--d:.25s">
+<div class="chips" id="chips"><button class="chip" aria-pressed="false">Selling online</button><button class="chip" aria-pressed="false">Orders and messaging</button><button class="chip" aria-pressed="false">Payments</button><button class="chip" aria-pressed="false">Operations and admin</button><button class="chip" aria-pressed="false">Developer tooling</button><button class="chip" aria-pressed="false">Something else</button></div>
+<label for="org">Your business or project</label><input id="org" autocomplete="organization">
+<label for="msg">What takes most of your time right now?</label><textarea id="msg"></textarea>
+<div class="acts" style="opacity:1;animation:none"><button class="btn" id="copy" type="button">Copy brief</button><a class="btn ghost" id="mail" href="#" hidden>Send by email</a></div>
+<div class="note" id="note"></div>
+<p class="note">Or write to <a href="mailto:vestmoor.group@gmail.com">vestmoor.group@gmail.com</a>.</p>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Vestmoor Group</span><span>Written by the team</span><a href="mailto:vestmoor.group@gmail.com" style="text-decoration:none;text-transform:none;letter-spacing:.04em">vestmoor.group@gmail.com</a></div></footer>
+
+<script>
+const CONTACT_EMAIL="vestmoor.group@gmail.com";
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// contour lines
+const g=document.getElementById('cont'),ct0=document.getElementById('ct');
+for(let i=0;i<7;i++){const y=100+i*105,a=30+(i%4)*14;let d=`M-300 ${y} Q-200 ${y-a} -100 ${y}`;for(let x=100;x<=1900;x+=200)d+=` T${x} ${y}`;
+const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);p.style.setProperty('--dl',(i*.18)+'s');p.style.setProperty('--dr',(26+i*3)+'s');g.appendChild(p)}
+new IntersectionObserver(e=>ct0.classList.toggle('off',!e[0].isIntersecting)).observe(document.getElementById('hero'));
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('transitionend',e=>{if(e.propertyName==='opacity')c.classList.add('done')}));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// header, parallax, timeline
+const hd=document.getElementById('hd'),ct=document.getElementById('ct'),tl=document.getElementById('tl');
+function onScroll(){const y=scrollY;hd.classList.toggle('sc',y>20);
+if(!rm){ct.style.transform=`translateY(${y*.16}px)`;}
+const r=tl.getBoundingClientRect(),h=innerHeight;tl.style.setProperty('--p',Math.max(0,Math.min(1,(h*.7-r.top)/r.height)).toFixed(3))}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+// hero glow + card tilt (pointer devices only)
+if(matchMedia('(hover:hover)').matches&&!rm){
+const hero=document.getElementById('hero'),gl=document.getElementById('glow');
+hero.addEventListener('pointermove',e=>{const b=hero.getBoundingClientRect();gl.style.setProperty('--gx',(e.clientX-b.left)+'px');gl.style.setProperty('--gy',(e.clientY-b.top)+'px')});
+document.querySelectorAll('.card').forEach(c=>{
+c.addEventListener('pointermove',e=>{const b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width,y=(e.clientY-b.top)/b.height;
+c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');
+c.style.transform=`perspective(900px) rotateX(${(.5-y)*5}deg) rotateY(${(x-.5)*6}deg) translateY(-4px)`});
+c.addEventListener('pointerleave',()=>c.style.transform='')})}
+// brief
+const chips=document.querySelectorAll('.chip'),note=document.getElementById('note'),mail=document.getElementById('mail');
+chips.forEach(c=>c.addEventListener('click',()=>c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')!=='true')));
+function brief(){const sel=[...chips].filter(c=>c.getAttribute('aria-pressed')==='true').map(c=>c.textContent).join(', ')||'Not specified';
+return `Vestmoor brief\nInterested in: ${sel}\nBusiness or project: ${document.getElementById('org').value||'-'}\nWhat takes the most time: ${document.getElementById('msg').value||'-'}`}
+if(CONTACT_EMAIL){mail.hidden=false;const sm=()=>{mail.href=`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Project brief')}&body=${encodeURIComponent(brief())}`};sm();document.addEventListener('input',sm);document.addEventListener('click',sm)}
+document.getElementById('copy').addEventListener('click',async()=>{
+try{await navigator.clipboard.writeText(brief());note.textContent='Brief copied. Paste it into your message to us.'}
+catch(e){note.textContent='Copying was blocked. Select and copy your text manually.'}});
+</script>
+</body>
+</html>
