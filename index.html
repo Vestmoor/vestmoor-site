@@ -5,20 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vestmoor Group</title>
 <meta name="description" content="Vestmoor builds quiet, durable systems that carry the routine work of a business, so it keeps moving without anyone watching.">
+<meta name="theme-color" content="#5E1A27">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vestmoor Group">
+<meta property="og:description" content="Quiet, durable software that carries the routine work of a business.">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%235E1A27'/%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='none' stroke='%23B39A5B'/%3E%3Cpolygon points='8,9 14,9 16,17 18,9 24,9 18,23 14,23' fill='%23F3EEE0'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
 <script>document.documentElement.classList.add('js')</script>
 <style>
-:root{--bg:#F3EEE0;--bg2:#EAE3D0;--ink:#1F2321;--mute:#5b605d;--burg:#5E1A27;--gold:#7A6329;--line:rgba(31,35,33,.16);--card:#FBF8EF;--btn:#5E1A27;--btn-t:#F3EEE0;color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12080B;--bg2:#1B0E12;--ink:#F3EEE0;--mute:#b3aba0;--burg:#9A3548;--gold:#B39A5B;--line:rgba(243,238,224,.16);--card:#1E1014;--btn:#F3EEE0;--btn-t:#3b0f19;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#12080B;--bg2:#1B0E12;--ink:#F3EEE0;--mute:#b3aba0;--burg:#9A3548;--gold:#B39A5B;--line:rgba(243,238,224,.16);--card:#1E1014;--btn:#F3EEE0;--btn-t:#3b0f19;color-scheme:dark}
+:root{--bg:#F3EEE0;--bg2:#EAE3D0;--ink:#1F2321;--mute:#5b605d;--burg:#5E1A27;--gold:#7A6329;--gold2:#A8873A;--line:rgba(31,35,33,.16);--card:#FBF8EF;--btn:#5E1A27;--btn-t:#F3EEE0;color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12080B;--bg2:#1B0E12;--ink:#F3EEE0;--mute:#b3aba0;--burg:#9A3548;--gold:#B39A5B;--gold2:#EBD79B;--line:rgba(243,238,224,.16);--card:#1E1014;--btn:#F3EEE0;--btn-t:#3b0f19;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12080B;--bg2:#1B0E12;--ink:#F3EEE0;--mute:#b3aba0;--burg:#9A3548;--gold:#B39A5B;--gold2:#EBD79B;--line:rgba(243,238,224,.16);--card:#1E1014;--btn:#F3EEE0;--btn-t:#3b0f19;color-scheme:dark}
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;z-index:70}
 h1,h2,h3{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:500;line-height:1.05;margin:0}
-em{font-style:italic;color:var(--gold)}
+em{font-style:italic;color:var(--gold);background:linear-gradient(100deg,var(--gold) 35%,var(--gold2) 50%,var(--gold) 65%) 100% 0/250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:gl 7s linear infinite}
+@keyframes gl{to{background-position:0 0}}
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.4s}
@@ -27,12 +34,20 @@ header.sc{border-color:var(--line)}
 header.sc .bar{height:56px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:500 17px "Cormorant Garamond",Georgia,serif;letter-spacing:.32em}
 .brand svg{width:30px;height:30px}
-.brand small{display:block;font:400 9px Jost,sans-serif;letter-spacing:.42em;color:var(--gold)}
+.brand small{display:block;font:400 10px Jost,sans-serif;letter-spacing:.42em;color:var(--gold)}
 nav{display:flex;align-items:center;gap:26px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
 nav a{text-decoration:none;position:relative;padding:4px 0}
 nav a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 nav a:not(.cta):hover::after{transform:scaleX(1)}
 .cta,.btn{display:inline-block;background:var(--btn);color:var(--btn-t);border:0;padding:12px 22px;font:400 13px Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s}
+.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-120%);animation:sheen 4.5s ease-in-out 3s infinite;pointer-events:none}
+@keyframes sheen{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.cta i{display:inline-block;font-style:normal;margin-left:10px;transition:transform .35s}
+.cta:hover i{transform:translateX(6px)}
+nav a.cta{display:inline-flex;align-items:center;padding:11px 20px 11px 22px;border:1px solid var(--gold);animation:ring 3.6s ease-out 2.5s infinite}
+nav a.cta::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold2);margin-right:11px;animation:blink 2.2s ease-in-out infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--gold) 55%,transparent)}70%,100%{box-shadow:0 0 0 13px transparent}}
+@keyframes blink{50%{opacity:.25}}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:var(--bg);padding:8px 14px}
 .cta:hover,.btn:hover{transform:translateY(-2px)}
@@ -55,11 +70,16 @@ h1{font-size:clamp(46px,9.5vw,112px);margin:22px 0 26px}
 @keyframes fade{to{opacity:1}}
 .hero .wrap{padding-block:48px 96px}
 .ct.off path{animation-play-state:paused}
-.status{position:absolute;bottom:26px;left:22px;right:22px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.status{position:absolute;bottom:26px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
 .status b{font-weight:400;color:var(--gold)}
-.mq{border-block:1px solid var(--line);background:var(--bg2)}
-.mq .strip{display:flex;justify-content:space-between;flex-wrap:wrap;gap:0 28px}
-.mq span{font:italic 500 21px "Cormorant Garamond",Georgia,serif;padding:14px 0;color:var(--mute)}
+.status b::after{content:"";display:inline-block;width:1px;height:26px;background:var(--gold);margin-left:12px;vertical-align:middle;transform-origin:top;animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);opacity:1}55%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+.mq{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden}
+.mq .strip{display:flex;width:max-content;animation:mq 32s linear infinite}
+.mq:hover .strip{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq span{white-space:nowrap;font:italic 500 21px "Cormorant Garamond",Georgia,serif;padding:14px 0;color:var(--mute)}
+.mq span::after{content:"◆";font:9px Jost,sans-serif;color:var(--gold);margin:0 40px}
 .js .card.rv.done{transition:transform .25s ease,border-color .4s}
 section{padding:110px 0}
 .tag{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
@@ -75,7 +95,7 @@ h2{font-size:clamp(36px,6vw,66px);max-width:760px}
 .num{font:italic 500 18px "Cormorant Garamond",Georgia,serif;color:var(--gold);letter-spacing:.1em}
 .card h3{font-size:32px;margin:14px 0 12px}
 .card p{margin:0;color:var(--mute);font-size:16px}
-.pill{display:inline-block;margin-top:22px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--line);padding:6px 12px;color:var(--mute)}
+.pill{display:inline-block;margin-top:22px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--line);padding:6px 12px;color:var(--mute)}
 .dark-band{background:var(--bg2);border-block:1px solid var(--line)}
 .tl{position:relative;margin-top:56px;padding-left:34px}
 .tl::before,.tl i{content:"";position:absolute;left:6px;top:8px;width:1px}
@@ -88,7 +108,7 @@ h2{font-size:clamp(36px,6vw,66px);max-width:760px}
 .st h3{font-size:34px}
 .st p{margin:8px 0 0;color:var(--mute);max-width:520px}
 .ex{display:flex;gap:26px;margin-top:14px;font-size:13px;letter-spacing:.06em}
-.ex b{display:block;font-weight:400;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.ex b{display:block;font-weight:400;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 details{border-top:1px solid var(--line)}
 details:last-of-type{border-bottom:1px solid var(--line)}
 summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:24px 0;font:500 24px "Cormorant Garamond",Georgia,serif}
@@ -109,20 +129,21 @@ textarea{min-height:130px;resize:vertical}
 .note{font-size:14px;color:var(--mute);margin-top:16px;min-height:22px}
 footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.js .rv{opacity:0;transform:translateY(34px);transition:opacity 1s ease var(--d,0s),transform 1s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
-.js .rv.in{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(34px);filter:blur(6px);transition:opacity 1s ease var(--d,0s),transform 1s cubic-bezier(.2,.8,.2,1) var(--d,0s),filter 1s ease var(--d,0s)}
+.js .rv.in{opacity:1;transform:none;filter:none}
 .rule{height:1px;background:var(--gold);width:84px;margin:26px 0 0;transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.2,.8,.2,1) .2s}
 .in .rule,.rule.in{transform:scaleX(1)}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv,.lead,.acts{opacity:1;transform:none}.line>span{transform:none}.ct path{stroke-dasharray:none}.rule{transform:none}.st::before{background:var(--gold)}.tl{--p:1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv,.lead,.acts{opacity:1;transform:none;filter:none}.line>span{transform:none}.ct path{stroke-dasharray:none}.rule{transform:none}.st::before{background:var(--gold)}.tl{--p:1}em{-webkit-text-fill-color:currentColor;background:none}}
 </style>
 </head>
 <body>
+<div id="pg" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="m" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5E1A27"/><rect x="4" y="4" width="92" height="92" fill="none" stroke="#B39A5B" stroke-width="2"/><g fill="#F3EEE0"><polygon points="28,28.5 40.5,28.5 52.5,62 52.5,72 49.5,72"/><polygon points="68,28.5 71.5,28.5 52.5,72 49.5,72"/><rect x="22" y="26" width="24" height="2.5"/><rect x="63" y="26" width="14" height="2.5"/></g></symbol></svg>
 
 <a class="skip" href="#principles">Skip to content</a>
 <header id="hd"><div class="wrap bar">
 <a class="brand" href="#top"><svg aria-hidden="true"><use href="#m"/></svg><span>VESTMOOR<small>GROUP</small></span></a>
-<nav><a href="#divisions">Divisions</a><a href="#principles">Principles</a><a href="#process">Process</a><a href="#faq">FAQ</a><a class="cta" href="#brief">Begin a brief</a></nav>
+<nav><a href="#divisions">Divisions</a><a href="#principles">Principles</a><a href="#process">Process</a><a href="#faq">FAQ</a><a class="cta" href="#brief">Start a brief<i aria-hidden="true">→</i></a></nav>
 </div></header>
 
 <main id="top">
@@ -133,12 +154,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="eyebrow">Vestmoor Group · Worldwide</div>
 <h1><span class="line"><span style="--d:.2s">Built quietly.</span></span><span class="line"><span style="--d:.4s"><em>Built to last.</em></span></span></h1>
 <p class="lead">We design and build software that carries the routine work of a business, so it keeps moving without anyone watching.</p>
-<div class="acts"><a class="cta" href="#brief">Begin a brief</a><a class="cta ghost" href="#divisions">Our divisions</a></div>
+<div class="acts"><a class="cta" href="#brief">Start a brief<i aria-hidden="true">→</i></a><a class="cta ghost" href="#divisions">Our divisions</a></div>
 </div>
 <div class="status"><span>Now preparing first releases</span><b>Scroll</b></div>
 </div>
 
-<div class="mq"><div class="wrap strip"><span>Fixed-price scope</span><span>Full ownership at hand-over</span><span>Discreet by design</span></div></div>
+<div class="mq"><div class="strip"><span>Fixed-price scope</span><span>Full ownership at hand-over</span><span>Discreet by design</span><span>Fixed-price scope</span><span>Full ownership at hand-over</span><span>Discreet by design</span><span>Fixed-price scope</span><span>Full ownership at hand-over</span><span>Discreet by design</span><span>Fixed-price scope</span><span>Full ownership at hand-over</span><span>Discreet by design</span></div></div>
 
 <section id="principles"><div class="wrap">
 <div class="tag rv">01 — Principles</div>
@@ -212,13 +233,14 @@ document.querySelectorAll('.card').forEach(c=>c.addEventListener('transitionend'
 // reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-// header, parallax, timeline
-const hd=document.getElementById('hd'),ct=document.getElementById('ct'),tl=document.getElementById('tl');
+// header, progress, parallax, timeline
+const hd=document.getElementById('hd'),ct=document.getElementById('ct'),tl=document.getElementById('tl'),pg=document.getElementById('pg');
 function onScroll(){const y=scrollY;hd.classList.toggle('sc',y>20);
+pg.style.transform=`scaleX(${Math.min(1,y/Math.max(1,document.documentElement.scrollHeight-innerHeight)).toFixed(4)})`;
 if(!rm){ct.style.transform=`translateY(${y*.16}px)`;}
 const r=tl.getBoundingClientRect(),h=innerHeight;tl.style.setProperty('--p',Math.max(0,Math.min(1,(h*.7-r.top)/r.height)).toFixed(3))}
 addEventListener('scroll',onScroll,{passive:true});onScroll();
-// hero glow + card tilt (pointer devices only)
+// hero glow + card tilt + magnetic buttons (pointer devices only)
 if(matchMedia('(hover:hover)').matches&&!rm){
 const hero=document.getElementById('hero'),gl=document.getElementById('glow');
 hero.addEventListener('pointermove',e=>{const b=hero.getBoundingClientRect();gl.style.setProperty('--gx',(e.clientX-b.left)+'px');gl.style.setProperty('--gy',(e.clientY-b.top)+'px')});
@@ -226,7 +248,10 @@ document.querySelectorAll('.card').forEach(c=>{
 c.addEventListener('pointermove',e=>{const b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width,y=(e.clientY-b.top)/b.height;
 c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');
 c.style.transform=`perspective(900px) rotateX(${(.5-y)*5}deg) rotateY(${(x-.5)*6}deg) translateY(-4px)`});
-c.addEventListener('pointerleave',()=>c.style.transform='')})}
+c.addEventListener('pointerleave',()=>c.style.transform='')});
+document.querySelectorAll('.cta,.btn').forEach(b=>{
+b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.16).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.28).toFixed(1)}px)`});
+b.addEventListener('pointerleave',()=>b.style.transform='')})}
 // brief
 const chips=document.querySelectorAll('.chip'),note=document.getElementById('note'),mail=document.getElementById('mail');
 chips.forEach(c=>c.addEventListener('click',()=>c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')!=='true')));
